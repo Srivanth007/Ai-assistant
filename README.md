@@ -79,6 +79,7 @@ Create a `.env` file at the root of your project with the following:
 GOOGLE_CLIENT_ID=your-google-client-id  
 GOOGLE_CLIENT_SECRET=your-google-client-secret  
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
+DATABASE_URL="file:./dev.db"
 
 5. Initialize the Database
 ----------------------------------------
