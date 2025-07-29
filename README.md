@@ -17,19 +17,20 @@ A web-based AI assistant built with **Next.js**, integrated with **Google Calend
 
 ## ⚙️ Tech Stack
 
-| Layer       | Tech                          |
-|-------------|-------------------------------|
-| Frontend    | Next.js (App Router), React   |
-| Styling     | Tailwind CSS                  |
-| Auth        | Google OAuth 2.0              |
-| LLM         | Ollama                        |
-| Backend     | API Routes in Next.js         |
-| Database    | Prisma ORM + SQLite           |
+| Layer     | Tech                          |
+|-----------|-------------------------------|
+| Frontend  | Next.js (App Router), React   |
+| Styling   | Tailwind CSS                  |
+| Auth      | Google OAuth 2.0              |
+| LLM       | Ollama                        |
+| Backend   | API Routes in Next.js         |
+| Database  | Prisma ORM + SQLite           |
 
 ---
 
 ## 🖇️ Project Structure
 
+```
 ai-assistant/
 ├── app/
 │   ├── api/
@@ -42,51 +43,68 @@ ai-assistant/
 ├── pages/
 │   └── api/
 │       ├── chat.js             # Pages API route (LLM chat)
-│       ├── login.js            # login API
-│       └── register.js         # register API
+│       ├── login.js            # Login API
+│       └── register.js         # Register API
 ├── prisma/
 │   ├── schema.prisma           # Prisma schema definition
 │   └── dev.db                  # SQLite database file
-├── public/                     
+├── public/                     # Static assets
 ├── tailwind.config.js          # Tailwind CSS configuration
-└── .env                        # environment variables
+└── .env                        # Environment variables
+```
 
 ---
 
-📦 Setup Instructions
+## 📦 Setup Instructions
 
-1. Clone the repo
-----------------------------------------
+### 1. Clone the repo
+
+```bash
 git clone https://github.com/ai-assistant.git
 cd ai-assistant
+```
 
-2. Install dependencies
-----------------------------------------
+### 2. Install dependencies
+
+```bash
 npm install
+```
 
-3. Install Ollama & Download a Model
-----------------------------------------
-Make sure you have Ollama installed and running locally.
+### 3. Install Ollama & Download a Model
 
+Make sure you have [Ollama](https://ollama.com) installed and running locally.
+
+```bash
 ollama run llama3
+```
 
-You can also replace `llama3` with another supported model like `mistral` or `gemma`.
+> You can also replace `llama3` with another supported model like `mistral` or `gemma`.
 
-4. Set Up Environment Variables
-----------------------------------------
-Create a `.env` file at the root of your project with the following:
+### 4. Set Up Environment Variables
 
-GOOGLE_CLIENT_ID=your-google-client-id  
-GOOGLE_CLIENT_SECRET=your-google-client-secret  
+Create a `.env` file in the root of your project:
+
+```
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 DATABASE_URL="file:./dev.db"
+```
 
-5. Initialize the Database
-----------------------------------------
+### 5. Initialize the Database
+
+```bash
 npx prisma migrate dev --name init
+```
 
-6. Run the Development Server
-----------------------------------------
+### 6. Run the Development Server
+
+```bash
 npm run dev
+```
 
-Visit: http://localhost:3000 to start chatting with your AI assistant 🚀
+Now visit: [http://localhost:3000](http://localhost:3000) to start chatting with your AI assistant 🚀
+
+---
+
+
