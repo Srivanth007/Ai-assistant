@@ -26,6 +26,28 @@ A web-based AI assistant built with **Next.js**, integrated with **Google Calend
 | Backend     | API Routes in Next.js         |
 | Database    | Prisma ORM + SQLite           |
 
+---
+
+🧩 Architecture Overview
+
+/app
+  └── api/
+  └── chat/
+  └── layout.js
+  └── page.js
+/lib
+  └── google.js
+  └── auth.js
+/pages
+  └── api/
+      └── chat.js
+      └── login.js
+      └── register.js
+/prisma
+  └── schema.prisma
+  └── dev.db
+/public
+/tailwind.config.js
 
 ---
 
