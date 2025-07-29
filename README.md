@@ -31,23 +31,27 @@ A web-based AI assistant built with **Next.js**, integrated with **Google Calend
 🧩 Architecture Overview
 
 /app
-  └── api/
-  └── chat/
-  └── layout.js
-  └── page.js
+└── api/
+└── chat/ # App Router API for chat
+└── layout.js # App layout file
+└── page.js # Chat UI
+
 /lib
-  └── google.js
-  └── auth.js
+└── google.js # Google Calendar logic
+└── auth.js # OAuth & session utils
+
 /pages
-  └── api/
-      └── chat.js
-      └── login.js
-      └── register.js
+└── api/
+└── chat.js # Pages API (LLM endpoint)
+└── login.js # login route
+└── register.js # register route
+
 /prisma
-  └── schema.prisma
-  └── dev.db
-/public
-/tailwind.config.js
+└── schema.prisma # DB schema
+└── dev.db # SQLite DB file
+
+/public 
+tailwind.config.js # Tailwind config
 
 ---
 
